@@ -1,7 +1,6 @@
 {
   "name": "vcapp",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.1",
   "dependencies": {
     "commander": "^5.1.0",
     "fs-extra": "^9.0.1",

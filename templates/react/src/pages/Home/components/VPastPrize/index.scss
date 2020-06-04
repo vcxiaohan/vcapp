@@ -1,0 +1,11 @@
+@import '@/assets/styles/mixin.scss';
+
+.VPastPrize {
+  &-ctn {
+    @include shadow();
+
+    margin: $padding--md;
+    border-radius: $borderRadius--md;
+    background: #fff;
+  }
+}

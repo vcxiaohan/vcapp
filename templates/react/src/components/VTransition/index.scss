@@ -1,0 +1,76 @@
+@import '@/assets/styles/mixin.scss';
+
+$prefix: VTransition;
+
+.VTransition {
+}
+
+/* fade 效果 */
+.#{$prefix}-fade {
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.#{$prefix}-fade-enter,
+.#{$prefix}-fade-appear {
+  display: block;
+  opacity: 0;
+}
+
+.#{$prefix}-fade-enter-active,
+.#{$prefix}-fade-appear-active {
+  display: block;
+  opacity: 1;
+}
+
+.#{$prefix}-fade-enter-done {
+  display: block;
+  opacity: 1;
+}
+
+.#{$prefix}-fade-exit {
+  display: block;
+  opacity: 1;
+}
+
+.#{$prefix}-fade-exit-active {
+  display: block;
+  opacity: 0;
+}
+
+.#{$prefix}-fade-exit-done {
+  display: none;
+  opacity: 0;
+}
+
+/* rotate 效果 */
+.#{$prefix}-rotate {
+  transition: all 0.5s ease;
+  transform-origin: center;
+}
+
+.#{$prefix}-fade-enter,
+.#{$prefix}-fade-appear {
+  transform: rotate(0);
+}
+
+.#{$prefix}-rotate-enter-active,
+.#{$prefix}-rotate-appear-active {
+  transform: rotate(0);
+}
+
+.#{$prefix}-rotate-enter-done {
+  transform: rotate(180deg);
+}
+
+.#{$prefix}-rotate-exit {
+  transform: rotate(180deg);
+}
+
+.#{$prefix}-rotate-exit-active {
+  transform: rotate(0);
+}
+
+.#{$prefix}-rotate-exit-done {
+  transform: rotate(0);
+}

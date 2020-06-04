@@ -1,0 +1,11 @@
+@import '@/assets/styles/mixin.scss';
+
+.VQuickLink {
+  @include shadow();
+
+  display: flex;
+  justify-content: space-between;
+  margin: $padding--md;
+  padding: 16px 37px;
+  border-radius: $borderRadius--md;
+}

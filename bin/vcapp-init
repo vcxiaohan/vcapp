@@ -1,0 +1,47 @@
+#! /usr/bin/env node
+const path = require('path')
+const fs = require('fs-extra')
+const inquirer = require('inquirer')
+const { appPath, tempFilePath } = require('../src/utils/path')
+
+const promptList = [{
+  type: 'input',
+  name: 'name',
+  message: '请输入项目名称：',
+  validate(input) {
+    if (!input) {
+      return '项目名不能为空！';
+    }
+    if (fs.existsSync(input)) {
+      return '当前目录已经存在同名项目，请换一个项目名！';
+    }
+    return true;
+  }
+}, {
+  type: 'list',
+  message: '请选择模板类型：',
+  name: 'template',
+  choices: [
+    "react",
+    "vue",
+  ]
+}];
+
+
+
+inquirer.prompt(promptList)
+  .then(async ({ name, template }) => {
+    // const appPath = path.join(process.cwd(), name)
+    // const tempFilePath = path.join(__dirname, '../templates', template)
+
+    const pkgJson = require(path.join(tempFilePath, template, 'package.json'))
+    pkgJson.name = name
+
+    try {
+      await fs.copy(path.join(tempFilePath, template), path.join(appPath, name))
+      await fs.writeFile(path.join(appPath, name, 'package.json'), JSON.stringify(pkgJson, null, 2))
+    } catch (err) {
+      console.error(err)
+    }
+  })
+

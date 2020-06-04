@@ -1,0 +1,26 @@
+{
+  "msg": "成功",
+  "code": 0,
+  "data": {
+    "list": [
+      {
+        "id": "1",
+        "src": "",
+        "link": "/SelecteLottery",
+        "title": "选号"
+      },
+      {
+        "id": "2",
+        "src": "",
+        "link": "/LotteryRecord",
+        "title": "购彩记录"
+      },
+      {
+        "id": "3",
+        "src": "",
+        "link": "/LotteryRecord",
+        "title": "兑奖"
+      }
+    ]
+  }
+}

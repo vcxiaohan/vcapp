@@ -1,0 +1,40 @@
+@import "variable";
+
+// 强制换行
+@mixin break-word() {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+// 垂直水平居中
+@mixin center($top: 50%, $left: 50%, $right: auto, $bottom: auto, $translateX: -50%, $translateY: -50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  transform: translate($translateX, $translateY);
+}
+
+// 溢出省略
+@mixin ellipsis () {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 阴影
+@mixin shadow () {
+  box-shadow: 0px 2px 6px rgba(0 ,0, 0, .06);
+}
+
+// 字符串替换
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}

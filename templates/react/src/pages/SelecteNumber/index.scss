@@ -1,0 +1,12 @@
+@import '@/assets/styles/mixin.scss';
+
+.SelecteNumber {
+  padding: $padding--lg;
+
+  &-types {
+    .VIcon {
+      width: 33.33%;
+      margin-bottom: $padding--lg;
+    }
+  }
+}

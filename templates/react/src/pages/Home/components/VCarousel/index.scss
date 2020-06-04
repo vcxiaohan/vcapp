@@ -1,0 +1,33 @@
+.VCarousel {
+  $h: 125px !important;
+
+  .slider {
+    height: $h;
+
+    &-frame {
+      img {
+        width: 100%;
+        height: $h;
+      }
+    }
+
+    .am-carousel-wrap {
+      text-align: right;
+      padding: 0 12px;
+      box-sizing: border-box;
+
+      &-dot {
+        span {
+          background: #fff;
+          opacity: .25;
+        }
+        
+        &-active {
+          span {
+            opacity: .8;
+          }
+        }
+      }
+    }
+  }
+}

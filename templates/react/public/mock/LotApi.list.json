@@ -1,0 +1,17 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "lotCode": "102",
+      "lotName": "七乐彩",
+      "iconUrl": "",
+      "linkUrl": ""
+    },
+    {
+      "lotCode": "101",
+      "lotName": "双色球",
+      "iconUrl": "",
+      "linkUrl": ""
+    }
+  ]
+}

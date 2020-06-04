@@ -1,0 +1,17 @@
+@import '@/assets/styles/mixin.scss';
+
+.VIcon {
+  display: inline-block;
+  text-align: center;
+
+  &-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  &-title {
+    color: $color-grey--6;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,23 @@
+@import '@/assets/styles/mixin.scss';
+
+.VScroll {
+  background: $bg--f5;
+  height: 100%;
+
+  .am-list-view-scrollview {
+    height: 100%;
+  }
+
+  &-loading {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg,
+    span {
+      vertical-align: middle;
+      margin: 4px;
+    }
+  }
+}

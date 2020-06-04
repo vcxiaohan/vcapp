@@ -1,0 +1,16 @@
+#! /usr/bin/env node
+const { program } = require('commander')
+
+// init
+// path
+// version
+// versions
+// update
+
+program
+  .parse(process.argv)
+
+const opts = program.opts()
+console.log(opts);
+
+

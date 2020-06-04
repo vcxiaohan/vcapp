@@ -1,0 +1,89 @@
+@import '@/assets/styles/mixin.scss';
+
+.VLotteryItem {
+  padding: $padding--md;
+  background: #fff;
+  border-radius: $borderRadius--md;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $padding--sm;
+
+    &-left {
+      &-title {
+        font-size: $fontSize--md;
+        color: $color-grey--3;
+        margin-right: 4px;
+      }
+
+      &-desc {
+        font-size: $fontSize--sm;
+        color: $color-grey--9;
+      }
+    }
+
+    &-right {
+      font-size: $fontSize--sm;
+      color: #ff5600;
+    }
+  }
+
+  &-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-left {
+      &-ball {
+        $w: 24px;
+
+        display: inline-block;
+        width: $w;
+        height: $w;
+        position: relative;
+        margin-right: $padding--sm;
+
+        .VIcon-icon {
+          width: 100%;
+          height: 100%;
+        }
+
+        .VIcon-title {
+          @include center();
+
+          position: absolute;
+          font-weight: 400;
+          color: #fff;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    &-top {
+      font-size: 21px;
+      color: $color-grey--3;
+      font-weight: 400;
+      width: 50%;
+      display: inline-block;
+
+      &-title {
+        font-size: $fontSize--sm;
+        color: $color-grey--6;
+        margin-bottom: 5px;
+        margin-top: 25px;
+      }
+      &-unit {
+        font-size: $fontSize--sm;
+        margin-left: 3px;
+      }
+    }
+
+    &-bottom {
+      margin-top: $padding--md;
+    }
+  }
+}

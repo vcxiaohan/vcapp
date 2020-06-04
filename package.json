@@ -1,0 +1,29 @@
+{
+  "name": "vcapp",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "commander": "^5.1.0",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.1.0"
+  },
+  "scripts": {
+    "vcapp": "./bin/vcapp init"
+  },
+  "bin": {
+    "vcapp": "bin/vcapp"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {}
+}

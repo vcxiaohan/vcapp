@@ -1,0 +1,13 @@
+#! /usr/bin/env node
+const { program } = require('commander')
+
+// init
+// path
+// version
+// versions
+// update
+
+program
+  .command('init', '初始化项目')
+  .command('version', '版本号')
+  .parse(process.argv)

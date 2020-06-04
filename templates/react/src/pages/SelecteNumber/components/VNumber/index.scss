@@ -1,0 +1,32 @@
+.VNumber {
+  &-title {
+  }
+  &-number {
+    &-ctn {
+      width: 14.28%;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 10px;
+
+      &-item {
+        $w: 35px;
+        $c: #ff504f;
+
+        width: $w;
+        height: $w;
+        line-height: $w;
+        margin: 0 auto;
+        border: 0.5px solid $c;
+        color: $c;
+        font-weight: bold;
+        border-radius: 50%;
+        box-sizing: border-box;
+
+        &.on {
+          color: #fff;
+          background: $c;
+        }
+      }
+    }
+  }
+}

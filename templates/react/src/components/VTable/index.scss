@@ -1,0 +1,33 @@
+@import '@/assets/styles/mixin.scss';
+
+.VTable {
+  text-align: center;
+  font-size: $fontSize--sm;
+  background: $bg--ff;
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+
+    thead {
+      background: $bg--f5;
+      color: $color-grey--6;
+    }
+
+    tbody {
+      color: $color-grey--3;
+    }
+
+    th {
+      padding: $padding--sm $padding--lg;
+      border: 1px solid $color-grey--e;
+      font-weight: normal;
+    }
+
+    td {
+      padding: $padding--md $padding--lg;
+      border: 1px solid $color-grey--e;
+    }
+  }
+}
